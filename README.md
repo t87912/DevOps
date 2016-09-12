@@ -54,11 +54,36 @@
 	git push
 </p> <br />
 
+## Installing Vagrant:
+
+**1. Get the vagrant installer from the following location:
+
+<p align="center">
+	C:\LocalInstall\SharePoint Repositories\DevOps-CI\Vagrant
+</p> <br />
+**2. Follow the installation instructions.**
+
+## Running Vagrant:
+
+**1. Clone the Github repo, use the instructions from above**
+
+**2. Copy and paste the repo elsewhere, this is to prevent any files Vagrant creates being accidently pushed to the repo.**
+
+**3. Enter the directory that you pasted the repo into, then cd into the repo**
+
+**4. Run vagrant**
+<p align="center">
+	vagrant up
+</p> <br />
+
+## Vagrant Troubleshooting
+This section will troubleshoot common vagrant problems
+
+**A VirtualBox machine with the name 'master'/'agent' already exists.**
+You have another virtual machine with the same name as this one, go into VirtualBox and delete the Virtual Machine and all its associated files.
+
 ## Brief Project Description
 This project is a shared project produced by a group of trainee consultants etc etc...
-
-## Previously Added
-
 
 ## New Features/ Changes
 * To be filled.
