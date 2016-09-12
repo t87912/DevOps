@@ -1,57 +1,68 @@
 ## DevOps
 
-# Instructions for using Git with GitBash:
+# Instructions for using Git:
 
-1. Open GitBash
+** 1. Open GitBash **
 
-2. Navigate to desired location
+** 2. Navigate to desired location **
 
-You can right click on the folder and open in GitBash
+<p align="center">
+    You can right click on the folder and open in GitBash
+</p> <br />
 
-3. Make a new directory 
+** 3. Make a new directory ** 
 
-mkdir <name-of-directory>
+<p align="center">
+	mkdir <name-of-directory>
+	e.g. mkdir DevOpsProject
+</p> <br />
 
-e.g. mkdir DevOpsProject
+** 4. Enter the directory you created **
 
-4. Enter the directory you created
+<p align="center">
+	cd <name-of-directory>
+	e.g. cd DevOpsProject
+</p> <br />
 
-cd <name-of-directory>
+** 5. Initialise Git **
 
-e.g. cd DevOpsProject
+<p align="center">
+	git innit
+</p> <br />
 
-5. Initialise Git
+** 6. Clone the Git repo **
 
-git innit
+<p align="center">
+	git clone <repo-url>
+	e.g. git clone https://github.com/t87912/DevOps.git
+</p> <br />
 
-6. Clone the Git repo
-
-git clone <repo-url>
-
-e.g. git clone https://github.com/t87912/DevOps.git
-
-The repo is now on your local machine and you can start editing it.
+## The repo is now on your local machine and you can start editing it.
 
 # Saving the changes to Github:
 
-1. Add the files you want to update
+** 1. Add the files you want to update **
 
-git add <filename>
-OR
-git add . (this will add the whole directory, not just single files)
+<p align="center">
+	git add <filename>
+	OR
+	git add . (this will add the whole directory, not just single files)
+</p> <br />
 
-2. Commit the changes
+** 2. Commit the changes **
 
-git commit -m "commit message"
+<p align="center">
+	git commit -m "commit message"
+</p> <br />
+	
+** 3. Push the changes **
 
-3. Push the changes
-
-git push
-
+<p align="center">
+	git push
+</p> <br />
 
 ## Brief Project Description
 This project is a shared project produced by a group of trainee consultants etc etc...
-
 
 ## Previously Added
 
