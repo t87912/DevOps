@@ -2,35 +2,34 @@
 
 # Instructions for using Git:
 
-** 1. Open GitBash **
+**1. Open GitBash**
 
-** 2. Navigate to desired location **
+**2. Navigate to desired location**
 
 <p align="center">
     You can right click on the folder and open in GitBash
 </p> <br />
 
-** 3. Make a new directory ** 
+**3. Make a new directory** 
 
 <p align="center">
-	mkdir <name-of-directory>
+	mkdir <name-of-directory><br />
 	e.g. mkdir DevOpsProject
 </p> <br />
 
 ** 4. Enter the directory you created **
 
 <p align="center">
-	cd <name-of-directory>
+	cd <name-of-directory><br />
 	e.g. cd DevOpsProject
 </p> <br />
 
-** 5. Initialise Git **
-
+**5. Initialise Git**
 <p align="center">
 	git innit
 </p> <br />
 
-** 6. Clone the Git repo **
+**6. Clone the Git repo**
 
 <p align="center">
 	git clone <repo-url>
