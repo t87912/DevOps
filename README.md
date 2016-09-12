@@ -12,13 +12,13 @@
 **3. Make a new directory** 
 
 <p align="center">
-	mkdir <name-of-directory><br />
+	mkdir [name-of-directory]<br />
 	e.g. mkdir DevOpsProject
 </p> <br />
 **4. Enter the directory you created**
 
 <p align="center">
-	cd <name-of-directory><br />
+	cd [name-of-directory]<br />
 	e.g. cd DevOpsProject
 </p> <br />
 **5. Initialise Git**
@@ -28,7 +28,7 @@
 **6. Clone the Git repo**
 
 <p align="center">
-	git clone <repo-url><br />
+	git clone [repo-url]<br />
 	e.g. git clone https://github.com/t87912/DevOps.git
 </p> <br />
 
@@ -39,7 +39,7 @@
 **1. Add the files you want to update**
 
 <p align="center">
-	git add <filename><br />
+	git add [filename]<br />
 	OR<br />
 	git add . (this will add the whole directory, not just single files)
 </p> <br />
@@ -61,7 +61,10 @@
 <p align="center">
 	C:\LocalInstall\SharePoint Repositories\DevOps-CI\Vagrant
 </p> <br />
-**2. Follow the installation instructions.**
+
+**2. Copy and paste the installer onto your desktop.**
+ 
+**3. Follow the installation instructions.**
 
 ## Running Vagrant:
 
