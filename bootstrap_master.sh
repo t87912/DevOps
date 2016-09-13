@@ -30,9 +30,14 @@ sudo touch /etc/puppet/manifests/site.pp
 sudo puppet cert list
 sudo puppet cert sign --all
 
-# Install java
+# Install java, maven, git, jira, jenkins
 sudo puppet module install puppetlabs-java -i /etc/puppet/modules
+sudo puppet module install maestrodev-maven -i /etc/puppet/modules
+sudo puppet module install puppetlabs-git -i /etc/puppet/modules
+sudo puppet module install puppet-jira -i /etc/puppet/modules
+sudo puppet module install rtyler-jenkins -i /etc/puppet/modules
 #sudo puppet module install puppetlabs-java
+
 
 
 # Edit site.pp:
