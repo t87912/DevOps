@@ -89,6 +89,15 @@ The repo is now on your local machine and you can start editing it.
 </p> <br />
 Two virtual machines should open, this may take some time the first time as various files need to be downloaded.
 
+## To actually get Puppet running, you need to do the following:
+**In the Master:**
+1. sudo puppet cert list
+2. sudo puppet cert sign --all
+
+**In the Agent:**
+1. sudo service puppet stop
+2. sudo puppet agent --test --server=ammaster.qac.local
+
 ## Vagrant Troubleshooting
 This section will troubleshoot common vagrant problems
 
