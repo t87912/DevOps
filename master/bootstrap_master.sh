@@ -26,8 +26,8 @@ else
  
     # Install some initial puppet modules on Puppet Master server
     #sudo puppet module install puppetlabs-java
-    #sudo puppet module install maestrodev-maven
-    sudo puppet module install puppetlabs-git
+    sudo puppet module install maestrodev-maven
+    #sudo puppet module install puppetlabs-git
     #sudo puppet module install puppetlabs-ntp
     #sudo puppet module install puppet-jira
     #sudo puppet module install maestrodev-jenkins
