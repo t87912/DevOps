@@ -34,7 +34,7 @@ sudo puppet cert sign --all
 sudo puppet module install puppetlabs-java -i /etc/puppet/modules
 sudo puppet module install maestrodev-maven -i /etc/puppet/modules
 sudo puppet module install puppetlabs-git -i /etc/puppet/modules
-sudo puppet module install puppet-jira -i /etc/puppet/modules
+sudo puppet module install mkrakowitzer-jira -i /etc/puppet/modules
 sudo puppet module install rtyler-jenkins -i /etc/puppet/modules
 #sudo puppet module install puppetlabs-java
 
@@ -47,6 +47,11 @@ echo "class { 'java':" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev
 echo "  distribution => 'jdk'," | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "  version      => 'latest'," | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "}" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
+echo "class { 'jira':" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
+echo "javahome    => '/opt/java'," | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
+echo "}" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
+echo "include jenkins" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
+echo "include git" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "#include tomcat" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "}" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null
 

@@ -1,0 +1,1 @@
+{"virtualbox":{"/tmp/shared":{"guestpath":"/tmp/shared","hostpath":"C:/Users/Administrator/Desktop/DevopsProject/DevOpsProject/DevOps/Shared","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Administrator/Desktop/DevopsProject/DevOpsProject/DevOps","disabled":false,"__vagrantfile":true}}}
