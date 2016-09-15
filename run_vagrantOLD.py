@@ -69,10 +69,7 @@ sudo apt-get install -y openssh-server openssh-client
 sudo ufw disable
 
 # Install puppet
-sudo apt-get install -y puppet puppetmaster
-
-# Install jira
-
+sudo apt-get install -y puppet puppetmaster 
 
 # Adding lines in hosts file: (/etc/hosts)
 # This inserts 2 lines in the host.
@@ -88,19 +85,11 @@ sudo touch /etc/puppet/manifests/site.pp
 # sudo puppet cert list
 # sudo puppet cert sign --all
 
-# Install jenkins - not with puppet
-
-wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt-get update
-sudo apt-get install -y jenkins
-
 # Install java, maven, git, jira, jenkins
 sudo puppet module install puppetlabs-java -i /etc/puppet/modules
 sudo puppet module install maestrodev-maven -i /etc/puppet/modules
 sudo puppet module install puppetlabs-git -i /etc/puppet/modules
-sudo puppet module install rtyler-jenkins -i /etc/puppet/modules
-sudo puppet module install mkrakowitzer-jira -i /etc/puppet/modules
+sudo puppet module install maestrodev-jenkins -i /etc/puppet/modules
 
 
 """
@@ -118,11 +107,7 @@ echo "include jenkins" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev
 echo "include git" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "include maven" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "#include tomcat" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
-echo "class { 'jira':" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
-echo "  javahome    => '/opt/java'," | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null && \
 echo "}" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null
-echo "}" | sudo tee --append /etc/puppet/manifests/site.pp 2> /dev/null
-
 
 """
 
