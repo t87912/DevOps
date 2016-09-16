@@ -213,30 +213,16 @@ for i in range(1, noMachines+1):
     os.chdir("Shared")
     txtFile = open("testTextFile.txt",'a') # create empty text file
     txtFile.close()
-    os.chdir("..")
-    os.chdir("..")
+    os.chdir("..") # go back a dir
+    os.chdir("..") # go back a dir
 
-    #destString = "\\Agent%s\\Config" % (i)
-    #copyanything("//Config", destString)
+    # sending agents to zip file, ready to be sent by email
+    zipFolderName = "Agent%s" % (i)
+    shutil.make_archive(zipFolderName, 'zip', stringDir)
 
 batchFile = open("runVagrant.bat",'w')
 batchFile.write(batchFileText)
 batchFile.close()
-    
-def copyDirectory(src, dest):
-    try:
-        shutil.copytree(src, dest)
-    # Directories are the same
-    except shutil.Error as e:
-        print('Directory not copied. Error: %s' % e)
-    # Any error saying that the directory doesn't exist
-    except OSError as e:
-        print('Directory not copied. Error: %s' % e)
-
-#print ("Working in: ", os.getcwd())
-#copyanything("C:\\Users\\Administrator\\Desktop\\Wed9am\\DevOpsWorkingFolder\\Shared", "C:\\Users\\Administrator\\Desktop\\Wed9am\\DevOpsWorkingFolder\\Agent1")
-
-
 
 
 
