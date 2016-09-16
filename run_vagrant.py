@@ -5,8 +5,20 @@ import os
 import shutil
 import errno
 
-# remove bootstrap master 
-#os.remove("bootstrap_master.sh")
+# remove bootstrap master
+try:
+    os.remove("bootstrap_master.sh")
+    os.remove("runVagrant.bat")
+except:
+    print ("No bootstrap_master.sh to remove.")
+
+batchFileText = """
+
+cd /d %~dp0
+vagrant up
+cmd.exe
+
+"""
 
 vagrantText = """
 Vagrant.configure("2") do |config|
@@ -139,22 +151,12 @@ print ("REMEMBER: if you have ran this script before, delete the VM Master/Agent
 print ("Working in: ", os.getcwd())
 currentDir = ("cd %s" % os.getcwd())
 os.system(currentDir) # Changing directory in CMD
-#os.system("vagrant up") # Running Vagrant
-#os.system('set /p id="Press enter to quit program..."') # stop CMD from quitting
-
 noMachines = int(input("Please enter the number of agents: "))
 
 # Create the master bootstrap with site.pp stuff for each agent:
-#listSitePP = []
 for z in range(1, noMachines+1):
     siteppFormatted = sitepp % (z)
-    #listSitePP.append(siteppFormatted)
     masterBootstrap = masterBootstrap + siteppFormatted
-
-#for a in range(1, len(listSitePP)):
- #   masterBootstrap.append
-
-#masterBootstrap = masterBootstrap + 
 
 print ("Printing Master Bootstrap")
 print (masterBootstrap)
@@ -163,7 +165,6 @@ print ("END Master Bootstrap")
 masterBootstrapFile = open("bootstrap_master.sh",'a') # create empty text file
 masterBootstrapFile.write(masterBootstrap)
 masterBootstrapFile.close()
-
 
 ipAddresses = []
 for i in range(1, noMachines+1):
@@ -193,12 +194,16 @@ for i in range(1, noMachines+1):
     os.makedirs(stringDir) # Make the Agent X dir
     os.chdir(stringDir) # cd into Agent X dir
     os.makedirs("Shared") # Make shared folder
-    #os.makedirs("Config")
 
     # Make bootstrap here:
     bootstrapFile = open("bootstrap_agent.sh",'a') # create empty text file
     bootstrapFile.write(bootstrapFiles[i-1])
     bootstrapFile.close()
+
+    # Make batch file:
+    batchFile = open("runVagrant.bat",'w')
+    batchFile.write(batchFileText)
+    batchFile.close()
 
     # Make vagrant file here:
     vagrantFile = open("Vagrantfile",'a') # create empty text file
@@ -214,8 +219,9 @@ for i in range(1, noMachines+1):
     #destString = "\\Agent%s\\Config" % (i)
     #copyanything("//Config", destString)
 
-# run vagrant
-#os.system("vagrant up") # Running Vagrant
+batchFile = open("runVagrant.bat",'w')
+batchFile.write(batchFileText)
+batchFile.close()
     
 def copyDirectory(src, dest):
     try:
