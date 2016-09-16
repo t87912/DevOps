@@ -32,9 +32,9 @@ Choose the version that matches your operating system and run through the instal
 
 # Instructions for the person setting up the Master:
 
-**1. Download the Git repo from here: LINK**
+**1. Download the Git repo from here: https://github.com/t87912/DevOps/releases/tag/v1.0**
 
-**2. Unzip it**
+**2. Unzip it and double click on the unzipped folder**
 
 **3. Right click on run_vagrant.py and select 'Edit with IDLE'**
 
@@ -55,11 +55,15 @@ sudo puppet cert sign --all
 
 # Instructions for the people setting up the Agents:
 
-**1. The person setting up the master will have sent you a zip file called 'AgentN', unzip it**
+**1. The person setting up the master will have sent you a zip file called 'AgentN', unzip it and go into it**
 
 **2. Double click on the runVagrant.bat file**
 
 **3. Tell the master when Ubuntu has booted up so they can sign the certificates**
+
+# Instructions for setting up Jira and Jenkins:
+
+**TBC**
 
 # For the programmers:
 
