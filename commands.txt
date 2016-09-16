@@ -1,0 +1,32 @@
+#sudo passwd jenkins
+#sudo service jenkins start
+
+# sign agent certs
+sudo puppet cert sign --all
+
+
+cd /var/lib/jenkins
+
+sudo chmod o=rwx secrets
+
+cd secrets
+
+sudo chmod o=rwx initialadminpasswd
+copy paste passwd into localhost port 8080
+
+admin is username
+
+3d3c47014a584628aea2c65a948bf737
+
+Jenkins stuff:
+cd ~/.ssh
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCWw0o/AsUDxurPL7OUjIGHDP0WRU3mz41fT3of+lmhXsNhPxVCXRu4BomycX/3SLpLC5ajt0Ox0HeHzeRsv0Rfu+8m4qmAP2p0+1cq4H5vdpVFJtVqJFBFQ/gzBgypTTj25YNlYfAv4CtCcwwwFaeqRzWdOnc6PA8kiLreZeItKnZVZxz08qfLeLSdpWoWL/QlaO7R/mxiTffE8ZOrsS8uBriwfhR/GOkHM2V+4Sx5FpEV7ZmKUdGYrxKo3AjW+eSx4tLfDeP7jSfS4ngGtapjV6mydEuwpqlJU58xJh3ZQdy97cz/uoMyfgSgdGTR9O4Biv4tob8PbwMncuKxlM11 admin@192.168.1.9
+
+
+jira:
+
+express install
+2 custom ports
+8081
+8006

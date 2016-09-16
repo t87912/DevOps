@@ -63,7 +63,31 @@ sudo puppet cert sign --all
 
 # Instructions for setting up Jira and Jenkins:
 
-**TBC**
+**Jira:**
+
+The master must download and install Jira:
+
+https://confluence.atlassian.com/adminjiraserver071/installing-jira-applications-on-linux-802592173.html
+
+Choose express install. 
+
+You will need to install Jira on the HTTP port 8081, it cannot be 8080 as Jenkins uses that port.
+
+The control port needs to be set to 8006.
+
+Look at the link above for information regarding the use of Jira.
+
+It can be accessed from typing in localhost:8081 on your local machine in a web browser, or in the agent vm's by going to <ip-of-master>:8081.
+
+**Jenkins:**
+
+You can start the Jenkins service by typing the following into a terminal:
+
+sudo service jenkins start
+
+You can then access Jenkins through a web browser at localhost:8080
+
+The agent nodes can access Jenkins through <ip-of-master>:8080
 
 # For the programmers:
 
