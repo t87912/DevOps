@@ -30,9 +30,9 @@ https://www.python.org/downloads/release/python-340/
 
 Choose the version that matches your operating system and run through the installation.
 
-# Instructions for the person setting up the master:
+# Instructions for the person setting up the Master:
 
-**1. Download the Git repo from here: LINK **
+**1. Download the Git repo from here: LINK**
 
 **2. Unzip it**
 
@@ -48,8 +48,18 @@ Choose the version that matches your operating system and run through the instal
 
 **8. The master will now start up**
 
+**9. You will see zip files named 'Agent1', 'Agent2' e.t.c, distribute these zip files to the people you want to run the agents.**
+
 **(FOR LATER): once all the agents have booted up, open up a terminal (ctrl + alt + t) and type in:**
 sudo puppet cert sign --all
+
+# Instructions for the people setting up the Agents:
+
+**1. The person setting up the master will have sent you a zip file called 'AgentN', unzip it**
+
+**2. Double click on the runVagrant.bat file**
+
+**3. Tell the master when Ubuntu has booted up so they can sign the certificates**
 
 # For the programmers:
 
