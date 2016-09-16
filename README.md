@@ -1,5 +1,58 @@
 # DevOps Project - Group 1
 
+# For the users:
+
+## Software everybody needs:
+
+**Vagrant**
+
+You can get Vagrant 1.7.1 from the following link:
+
+https://releases.hashicorp.com/vagrant/1.7.1/
+
+Choose the version that matches your operating system and run through the installation.
+
+**Virtual Box**
+
+You can get Virtual Box 5.1.2 from the following link:
+
+https://www.virtualbox.org/wiki/Downloads
+
+Choose the version that matches your operating system and run through the installation.
+
+## Software the person setting up the master needs:
+
+**Python (for the user setting up the master only)**
+
+You can get Python from the following link:
+
+https://www.python.org/downloads/release/python-340/
+
+Choose the version that matches your operating system and run through the installation.
+
+# Instructions for the person setting up the master:
+
+**1. Download the Git repo from here: LINK **
+
+**2. Unzip it**
+
+**3. Right click on run_vagrant.py and select 'Edit with IDLE'**
+
+**4. In options menu, select 'Run' and then 'Run Module (F5)'**
+
+**5. Type in the number of agents you wish to create**
+
+**6. Type in the IP address you want each machine to have**
+
+**7. Double click on the runVagrant.bat file**
+
+**8. The master will now start up**
+
+**(FOR LATER): once all the agents have booted up, open up a terminal (ctrl + alt + t) and type in:**
+sudo puppet cert sign --all
+
+# For the programmers:
+
 ## Project Deliverables:
 
 You are to design and build a CI pipeline including Java, Maven, Git, Jira, Jenkins, Puppet and Vagrant. As a group, you are to create a virtualised environment making full use of Vagrant and the Vagrantfile to automate the process of provisioning and installing the applications listed above.
